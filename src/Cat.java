@@ -23,12 +23,16 @@ public class Cat {
 	// draw will render the Cat on the Graphics object
 	public void draw(Graphics g, int catX, int catY)
 	{
+		
 		Graphics2D g2 = (Graphics2D) g;
 		int x=catX;
 		int y=catY;
-		// Draw the head
+		// draw background black rectangle
 		g2.setColor(Color.black);
-		g2.fillOval(x, y, HEAD_DIMENSION, (int)(1.5*HEAD_DIMENSION));
+		g2.fillOval(x, y, (int)(1.1*HEAD_DIMENSION), (int)(1.1*HEAD_DIMENSION));
+		// Draw the head
+		g2.setColor(Color.white);
+		g2.fillOval((int)(2*x), (int)(2*y), HEAD_DIMENSION, HEAD_DIMENSION);
 		// Draw the eyes
 		g2.setColor(Color.red);
 		x = catX + EYE_X; 
@@ -37,7 +41,7 @@ public class Cat {
 		x += EYE_SEPARATION;
 		g2.fillOval(x, y, EYE_WIDTH, EYE_HEIGHT);
 		// Draw the mouth
-		g2.setColor(Color.white);
+		g2.setColor(Color.orange);
 		x = catX + MOUTH_X;
 		y = catY + MOUTH_Y;
 		g2.fillOval(x, y, MOUTH_WIDTH, MOUTH_HEIGHT);
