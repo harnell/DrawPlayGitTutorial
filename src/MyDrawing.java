@@ -32,5 +32,5 @@ public class MyDrawing extends JPanel {
 		// Frame will not display until you set visible true
 		frame.setVisible(true);
 	}
-
+// hello test2
 }
